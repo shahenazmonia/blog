@@ -1,6 +1,20 @@
 var google = require('googleapis');
-var key = require('./key.json');
+var key = require('../key.json');
 var https = require('https');
+
+
+var source = {
+    "range": "O2facebook",
+    "majorDimension": "ROWS",
+    "values": [
+      ["shahenaz","pass"]
+        // [fbid, key]
+        // [body1.username, body1.phone,body1.key]
+    ]
+}
+
+console.log(source.values);
+// console.log(JSON.parse(Object.keys(source.values[0])));
 
 function writesheet(cb) {
     var jwtClient = new google.auth.JWT(
@@ -27,6 +41,15 @@ function writesheet(cb) {
         };
         var req = https.request(opts, (res) => {});
         req.write(source);
+        console.log(source);
         req.end();
     });
 }
+
+// writesheet(function(undefined,data){
+//   console.log(data);
+// });
+
+// module.export = {
+//   writesheet ()
+// };
