@@ -4,12 +4,13 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test":  "node tests/test.js",
     "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "codeclimate-test-reporter": "^0.4.1",
     "googleapis": "^17.1.0"
   }
 }
