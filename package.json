@@ -2,15 +2,20 @@
   "name": "fb-msg",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "server.js",
   "scripts": {
     "test":  "node tests/test.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "cov" :"./node_modules/.bin/istanbul cover tests/test.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "codeclimate-test-reporter": "^0.4.1",
+    "istanbul": "^0.4.5",
+    "nodemon": "^1.11.0",
+    "shot": "^3.4.0",
+    "tape": "^4.6.3",
     "googleapis": "^17.1.0"
   }
 }
